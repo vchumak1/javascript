@@ -80,7 +80,7 @@ function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
         const genre = prompt(`Ваш любимый жанр под номером ${i}`);
         if (genre != null && genre != '' && genre.length < 50) {
-            personalMovieDB.genres[i - 1] = `Ваш любимый жанр ${genre} под номером: ${i}`;
+            personalMovieDB.genres[i - 1] = genre;
         } else {
             i--;
             console.log("Жанр введен не корректно"); 
