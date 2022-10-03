@@ -12,34 +12,35 @@ inputForm.addEventListener("submit", event => {
     let newItem = addItem.value;
     if (newItem) {
         arr.push(newItem);
-        addElement();
+        createElementsList();
     } else {
-        addElement();
+        createElementsList();
         console.log("Sorry");
-        console.log(arr);
     }
+    event.target.reset();
 });
 
 
-function addElement() {
+function createElementsList() {
     arr.forEach(element => {
         menu.innerHTML += `
                     <div class="item">
                         <li>${element}</li>
                     </div>
                 `;
+        document.querySelectorAll(".item").forEach((element, i) => {
+            element.addEventListener("click", () => {
+                element.firstElementChild.remove();
+                arr.splice(i, 1);
+                console.log(element);
+                console.log(arr);
+            });
+        });
     });
 }
 
-function removeElement() {
-    menu.addEventListener("click", i => {
-        menu.firstElementChild.remove();
-        arr.splice(i);
-    });
-}
 
-addElement();
-removeElement();
+createElementsList();
 
 //timer
 
