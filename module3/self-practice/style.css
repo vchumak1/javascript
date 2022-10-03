@@ -1,0 +1,28 @@
+.menu_wrapper {
+    display: block;
+    background-color: bisque;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.menu_wrapper ul {
+    display: inline-block;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px 10px ;
+    text-align: center;
+}
+
+.menu_wrapper li {
+    display: block;
+    margin: 0 auto;
+}
+
+.menu_wrapper .menu_items .item {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: aqua;
+    border: solid black;
+    cursor: pointer;
+}
